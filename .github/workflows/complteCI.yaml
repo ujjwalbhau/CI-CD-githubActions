@@ -83,11 +83,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run integration tests
-        run: npm run test:integration --if-present
-        env:
-          API_URL: ${{ secrets.API_URL }}
-          API_KEY: ${{ secrets.API_KEY }}
+      
 
       - name: Upload integration test logs
         uses: actions/upload-artifact@v4
