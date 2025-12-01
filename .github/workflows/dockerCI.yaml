@@ -18,10 +18,10 @@ jobs:
          password: ${{ secrets.DOCKERHUB_TOCKEN }}
       - name: Build docker hub image 
         run: |
-            docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/myapp:ci .
+            docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/myapp:ci .
       - name: Push docker Image 
         run: |
-         docker push ${{ secrets.DOCKER_HUB_USERNAME }}/myapp:ci
+         docker push ${{ secrets.DOCKER_HUBUSERNAME }}/myapp:ci
 
     
     ##           uses: docker/setup-qemu-action@v3
