@@ -1,0 +1,25 @@
+{
+  "name": "github-actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ujjwalbhau/CI-CD-githubActions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ujjwalbhau/CI-CD-githubActions/issues"
+  },
+  "homepage": "https://github.com/ujjwalbhau/CI-CD-githubActions#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
