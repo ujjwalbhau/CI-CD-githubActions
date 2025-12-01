@@ -21,7 +21,7 @@ jobs:
             docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/myapp:ci .
       - name: Push docker Image 
         run: |
-         docker push ${{ secrets.DOCKER_HUBUSERNAME }}/myapp:ci
+         docker push ${{ secrets.DOCKERHUB_USERNAME }}/myapp:ci
 
     
     ##           uses: docker/setup-qemu-action@v3
