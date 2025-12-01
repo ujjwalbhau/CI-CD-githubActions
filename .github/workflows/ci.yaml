@@ -1,0 +1,8 @@
+name: CI pipeline 
+on: push
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              run: echo "Checking out code..."
