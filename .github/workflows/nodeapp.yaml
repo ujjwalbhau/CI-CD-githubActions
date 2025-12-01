@@ -1,0 +1,18 @@
+name: Node.js CI
+on: [push, pull_request]
+jobs: 
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Setup Node.js
+              uses: actions/setup-node@v2
+              with: 
+                node-version: '20'
+            - name: print node version
+              run: node -v
+            - name: Install dependencies 
+              run: npm install
+            - name: Run tests
+              run: npm test
