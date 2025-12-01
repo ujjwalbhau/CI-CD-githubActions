@@ -1,7 +1,9 @@
 # Stage 1: Builder
 FROM node:20-alpine AS builder
 WORKDIR /app
+RUN mkdir -p /app/dist
 
+COPY index.js /app/dist/index.js
 COPY package*.json ./
 RUN npm ci
 
