@@ -6,3 +6,11 @@ jobs:
         steps:
             - name: Checkout code
               run: echo "Checking out code..."
+            - name: list folders
+              run: ls -la
+            - name: print workflow event
+              run: echo "${{ github.event_name }}"
+            - name: print github os 
+              run: echo "${{ runner.os }}"
+            - name: print github repo
+              run: echo "${{ github.repository }}"
