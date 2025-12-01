@@ -1,7 +1,14 @@
 name: CI pipeline 
 on: 
-  schedule:
-    - cron: '* * * * *'
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+env:
+  App_ENV: production
+  loglevel: debug
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -16,3 +23,9 @@ jobs:
               run: echo "${{ runner.os }}"
             - name: print github repo
               run: echo "${{ github.repository }}"
+            - name: print App_ENV
+              run: echo "${{ env.App_ENV }}"
+            - name: print loglevel
+              run: echo "${{ env.loglevel }}"
+            - name: Github secret 
+              run: echo " secret is ${{ secrets.SECRET_MESSAGE }}"
